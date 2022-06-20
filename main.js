@@ -2,11 +2,11 @@ const { app, BrowserWindow, ipcMain, nativeImage, NativeImage } = require('elect
 const path = require('path')
 const fs = require('fs')
 const https = require('https')
-
+let win
 function createWindow() {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 640,
-    height: 300,
+    height: 245,
     frame: false,
 
     webPreferences: {

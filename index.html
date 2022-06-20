@@ -4,16 +4,39 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-    <link href="styles.css" rel="stylesheet"/> 
     <script src="jquery.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #reg {
+            -webkit-app-region: drag;
+            position: fixed;
+        }
+
+        #viewer {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #text
+    </style>
 </head>
 <body>
 <button id="reg">=</button>
-
-
-
-
-<iframe src="hello.html" id="viewer"></iframe>
+<h1 id="text">把文件拖进来试试</h1>
+<iframe id="viewer" hidden></iframe>
 <script src="renderer.js"></script>
 </body>
 </html>
