@@ -9,6 +9,7 @@ document.body.addEventListener('drop', evt => {
   $("#viewer").show();
   $("#text").hide();
   document.getElementById("viewer").setAttribute("src", filePath);
+  document.title = file.name;
 }, false);
 document.body.addEventListener('dragover', (e)=>{
   e.preventDefault();
